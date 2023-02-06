@@ -1,0 +1,23 @@
+body{
+    border:2px solid green;
+}
+*{
+    margin:0;
+    padding:0;
+}
+
+.containeer{
+    width: 1170px;
+    margin: 0px 375px;
+}
+#navbar{
+    display: flex;
+    position: fixed;
+}
+#logo{
+padding: 50px 505px 50px 0px;
+}
+#nav-list{
+    display: flex;
+    
+}
