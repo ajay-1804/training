@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -35,12 +36,13 @@ nav {
   list-style: none;
   /* font-family: Montserrat; */
   font-weight: 500;
-  font-size: 16px;
+
   color: #333333;
 }
 
 #nav-link > li {
   padding-right: 70px;
+  font-size: 16px;
 }
 
 .containeer {
@@ -61,7 +63,7 @@ nav {
   padding: 65px 0px;
 }
 
-.banner {
+#banner {
   text-align: center;
   color: black;
   padding: 350px 0px;
@@ -69,10 +71,9 @@ nav {
   background-size: cover;
   /* border: 1px solid red; */
 }
-.banner::before {
+#banner::before {
   content: "";
   z-index: -1;
-  /* border: 1px solid black; */
   position: absolute;
   top: 152px;
   left: 0px;
@@ -82,7 +83,7 @@ nav {
   background-size: cover;
 }
 
-.banner h1 {
+#banner h1 {
   font-family: "Montserrat";
   font-weight: bold;
   font-size: 70px;
@@ -90,7 +91,7 @@ nav {
   margin-bottom: 25px;
 }
 
-.banner p {
+#banner p {
   font-family: "Montserrat";
   font-weight: 500;
   font-size: 28px;
@@ -105,10 +106,14 @@ nav {
   border: 2px solid #333333;
   padding: 20px 40px;
   border-radius: 4px;
-
+  
   cursor: pointer;
 }
 
+.btn:hover{
+  background: #333333;
+  color:#ffffff;
+}
 #about-us {
   display: flex;
   margin: 100px 0px 100px 0px;
@@ -156,13 +161,6 @@ nav {
   /* background-color: red; */
   position: relative;
 }
-/* .desc {
-  
-  /* background-color: #f7fbff; 
- background-color: red;
-  left: 0px;
-  right:0px;
-} */
 
 .desc::before {
   content: "";
@@ -206,6 +204,9 @@ nav {
   color: #333333;
   border-top: 1px solid #f2f2f2;
   padding: 45px 0px;
+}
+#footer>p{
+  font-family: 'Roboto', sans-serif;
 }
 
 #quotes {
@@ -263,7 +264,7 @@ nav {
     padding: 50px 0px;
   }
 
-  .banner::before {
+  #banner::before {
     top: 122px;
   }
 }
@@ -293,11 +294,11 @@ nav {
     padding-right: 40px;
   }
 
-  .banner h1 {
+  #banner h1 {
     font-size: 50px;
   }
 
-  .banner p {
+  #banner p {
     font-size: 21px;
   }
 }
@@ -322,18 +323,17 @@ nav {
     padding: 30px 30px 30px 0px;
     width: 50%;
   }
+  #nav-link > li {
+    padding-left: 0px;
+  }
 }
-/* hamburger media query */
 
 @media (max-width: 610px) {
   #header .fa-icon {
     display: block;
     padding: 5px;
     font-size: 30px;
-
     text-align: right;
-    /* width: 30px;
-    height: 30px; */
     border: 1px solid black;
   }
   #header .icon {
@@ -347,9 +347,10 @@ nav {
   #nav-link {
     width: 100%;
     flex-direction: column;
+    height: 200px;
   }
   #nav-link > li {
-    padding: 1.5rem 0;
+    margin-top: 25px;
   }
   nav {
     width: 99%;
@@ -359,12 +360,15 @@ nav {
 
     background: white;
     left: 1px;
-    padding-left: 25px;
+    padding-left: 30px;
     border-top: 1px solid #eeecec;
   }
   #header #nav-link {
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+  #footer > p {
+    text-align: center;
   }
 }
 @media (max-width: 450px) {
